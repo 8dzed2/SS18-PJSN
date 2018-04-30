@@ -1,52 +1,59 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Required meta tags -->
+        <title>ToDo List</title>
+        <!-- Required and optional meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Free Web ToDo List">
+        <meta name="keywords" content="ToDo, To-Do, TODO,">
+        <meta name="author" content="Henrik Baehde, Melanie Wendler">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <style>
-            .jumbotron{
-            <!-- background-color:#C50E1F; -->
-            color:white;
-            }
-        </style>
-        <title>Todo board</title>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+        <!-- Own CSS and JS-->
+        <link rel="stylesheet" href="assets/css/own.css"/>
     </head>
     <body>
         <div class="container-fluid">
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="index.html">TO-DOS</a>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="index.html">Todo</a>
-                        <a class="nav-item nav-link" href="howToEditTodo.html">How To Edit</a>
-                        <a class="nav-item nav-link" href="imprint.html">Imprint</a>
+                        <a class="nav-item nav-link" href="createTodo.html">Creat New Task</a>
+                        <a class="nav-item nav-link" href="editTodo.html">Edit Task</a>
+                        <a class="nav-item nav-link" href="howToEditTodo.html">Wiki</a>
+                        <a class="nav-item nav-link" href="about.html">About</a>
                     </div>
                 </div>
             </nav>
+            <!-- Header with site description -->
+            <div class="jumbotron">
+                <h1>
+                    My To-Do List
+                </h1>
+                <!-- horizontal line -->
+                <hr>
+                <h2>
+                    Get reminded anytime -
+                    Never forget a meeting, deadline or your purchases again.
+                </h2>
+                <!-- Edit helper button -->
+                <br>
+                <p>
+                <h3 style="float: right;">
+                    Check out NOW how easy it is to create your own task:
+                    <a class="btn btn-success" href="howToEditTodo.html">
+                        &#x25B7;   <!--<span class="glyphicon glyphicon-play-circle"></span>-->
+                    </a>
+                </h3>
+            </div>
+            <!-- class "row" : adjust table width to page width  -->
             <div class="row">
-                <div class="col-md-12">
-                    <!-- Header with site description -->
-                    <div class="jumbotron">
-                        <h2>
-                            Current Todos
-                        </h2>
-                        <p>
-                            Here you can see all current TODOs. You can also create new ones and edit or delete existing entries by clicking the appropriate buttons.
-                        </p>
-                        <!-- Edit helper button -->
-                        <p>
-                            <a class="btn btn-primary btn-large" href="howToEditTodo.html">How to edit a TODO</a>
-                        </p>
-                    </div>
-                    <a class="btn btn-success"  href="createTodo.html">Create new Todo</a>
-                    <!-- Todo list -->
+                <!-- "col-xs/md-12" : table adapts to desktop, tablet and smartphone-->
+                <div class="col-xs-12 col-md-12">
+                    <h2> My To-Do List <span><a class="btn btn-success"  href="createTodo.html">Create new Todo</a></span></h2>
                     <table class="table">
                         <thead>
                             <tr>
@@ -69,37 +76,39 @@
                                     Hierbei besteht ein TODO unter anderem aus einem TODO Text (in der Regel weniger als 160 Zeichen), einer Deadline zu wann das TODO bearbeitet werden muss (ende)
                                 </td>
                                 <td>
-                                    14.05.18
+                                    05/14/2018
                                 </td>
                                 <td>
                                     100%
                                 </td>
                                 <td>
-                                    <div class="btn-group">
-										<a class="btn btn-primary" href="editTodo.html">
-										Edit
-										</a>
+                                    <!-- toggle : no space between buttons -->
+                                    <div class="btn-group-toggle" data-toggle="buttons">
+                                        <a class="btn btn-primary" href="editTodo.html">
+                                        Edit
+                                        </a>
                                         <button type="button" class="btn btn-danger">
                                         Delete
                                         </button>
                                     </div>
                                 </td>
                             </tr>
+                            <!-- table-active to switch color to gray-->
                             <tr class="table-active">
                                 <td>
                                     Some very specific description.
                                 </td>
                                 <td>
-                                    23.05.18
+                                    05/23/2018
                                 </td>
                                 <td>
                                     10%
                                 </td>
                                 <td>
-                                    <div class="btn-group">
+                                    <div class="btn-group-toggle">
                                         <a class="btn btn-primary" href="editTodo.html">
-										Edit
-										</a>
+                                        Edit
+                                        </a>
                                         <button type="button" class="btn btn-danger">
                                         Delete
                                         </button>
@@ -111,16 +120,16 @@
                                     Medium description with 77 characters. Medium description with 77 characters.
                                 </td>
                                 <td>
-                                    29.05.18
+                                    05/29/2018
                                 </td>
                                 <td>
                                     25%
                                 </td>
                                 <td>
-                                    <div class="btn-group">
+                                    <div class="btn-group-toggle">
                                         <a class="btn btn-primary" href="editTodo.html">
-										Edit
-										</a>
+                                        Edit
+                                        </a>
                                         <button type="button" class="btn btn-danger">
                                         Delete
                                         </button>
@@ -132,16 +141,16 @@
                                     Short description
                                 </td>
                                 <td>
-                                    01.06.18
+                                    06/01/2018
                                 </td>
                                 <td>
                                     15%
                                 </td>
                                 <td>
-                                    <div class="btn-group">
-                                       <a class="btn btn-primary" href="editTodo.html">
-										Edit
-										</a>
+                                    <div class="btn-group-toggle">
+                                        <a class="btn btn-primary" href="editTodo.html">
+                                        Edit
+                                        </a>
                                         <button type="button" class="btn btn-danger">
                                         Delete
                                         </button>
@@ -152,6 +161,10 @@
                     </table>
                 </div>
             </div>
+            <!-- fluid : adjust footer width to page width-->
+            <footer class="container-fluid text-center ">
+                Designed and Built by <a href="https://github.com/8dzed2">@Baehde</a> & <a href="https://github.com/Pazifistin">@Wendler</a>
+            </footer>
         </div>
     </body>
 </html>
